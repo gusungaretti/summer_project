@@ -47,10 +47,5 @@ def sign_up():
 
 
   data= request.form
-  
   return render_template("sign_up.html")
 
-
-@auth.route("/movies")
-def movies():
-  return "<h1>Movies</h1>"
