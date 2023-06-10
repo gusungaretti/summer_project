@@ -1,6 +1,7 @@
 #Movie and Television Tracker
 
 from flask import Blueprint, render_template, request, flash
+from .models import User
 
 auth = Blueprint('auth', __name__)
 
@@ -11,7 +12,6 @@ def login():
   #when you but the submitted form into a variable (ie.data), it is stored as a list with tuples 
   #ie. [('email', 'liz@gmail.com'), ('password', '1234')]
   data= request.form
-  print(data)
   return render_template("login.html", boolean=True)
 
 
@@ -29,7 +29,7 @@ def sign_up():
     password1 = request.form.get('password1')
     password2 = request.form.get('password2')
 
-    address= email.find("@")
+    #address= email.find("@")
 
     # if email[(address + 1):] != "gmail.com" or  email[(address + 1):] != "yahoo.com" or  email[(address + 1):] != "hotmail.com":
     #   flash("Not a valid email adress", category= 'error')
@@ -47,5 +47,10 @@ def sign_up():
 
 
   data= request.form
-  print(data)
+  
   return render_template("sign_up.html")
+
+
+@auth.route("/movies")
+def movies():
+  return "<h1>Movies</h1>"

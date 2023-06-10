@@ -1,29 +1,28 @@
-{% extends "base.html" %} {% block title%}Login{% endblock %}
-
+{% extends "base.html" %} {% block title%}Login{% endblock %} {% block content %}
   
-  {% block content %}
-  <h1> This is the login up page</h1>
-  <form method= "POST">
-    <h3 align= "center">Login</h3>
 
-    #email
-    <div class= "form-group">
-      <label for= "email">Email Address</label>
-      <input type= "email" class="form-control" id="email" name="email" placeholder="Enter email:"
-      />
-    </div>
+<form method= "POST">
+  <br />
+  <h3 align="center">Login</h3>
 
-    #password
-    <div class= "form-group">
-      <label for= "password">Password</label>
-      <input type= "password" class="form-control" id="password" name="password" placeholder="Enter your password:"
-      />
-    </div>
+  <!--email-->
+  <div class= "form-group">
+    <label for= "email">Email Address</label>
+    <input type= "email" class="form-control" id="email" name="email" placeholder="Enter email:"
+    />
+  </div>
 
-    <br />
+  <!--password-->
+  <div class= "form-group">
+    <label for= "password">Password</label>
+    <input type= "password" class="form-control" id="password" name="password" placeholder="Enter your password:"
+    />
+  </div>
 
-    <button type="submit" class="btn btn-primary">Login</button?
+  <br />
+
+  <button type="submit" class="btn btn-primary">Login</button?
 
 
-  </form>
-  {% endblock %}
+</form>
+{% endblock %}
