@@ -43,7 +43,7 @@ def sign_up():
     elif len(password1) < 7:
       flash("Password must be greater than 7 characters.", category= 'error')
     else:
-      flash("Account create!", category= 'success')
+      flash("Account created!", category= 'success')
 
 
   data= request.form

@@ -1,3 +1,5 @@
+<!--theme of the website; navigation bar, footer, header, etc. you will overide the base template with other templates-->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,7 +20,9 @@
     <title>{% block title %}Home{% endblock %}</title>
   </head>
   <body>
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      
       <button
         class="navbar-toggler"
         type="button"
@@ -26,13 +30,27 @@
         data-target="#navbar"
       >
         <span class="navbar-toggler-icon"></span>
+        
       </button>
+      <span class="navbar-brand mb-0 h1">FILM FINDER</span>
       <div class="collapse navbar-collapse" id="navbar">
         <div class="navbar-nav">
           <a class="nav-item nav-link" id="home" href="/">Home</a>
-          <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+          <a class="nav-item nav-link" id="movies" href="/movies">Movies</a>
+          <a class="nav-item nav-link" id="television" href="/television">Television</a>
+          
         </div>
       </div>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-item nav-link" id="login" href="/login">Login</a>
+        </li> 
+      
+        <li class="nav-item">
+          <a class="nav-item nav-link" id="sign-up" href="/sign-up">Sign Up</a>
+        </li>  
+      </ul>
     </nav>
 
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
